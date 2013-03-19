@@ -194,7 +194,7 @@ craft.sync_app: craft.update
 #
 # Installs Craft in the current application directory
 ##
-craft.install: craft.install
+craft.install:
 	@$(call craft.install)
 
 
