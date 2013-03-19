@@ -108,8 +108,7 @@ endef
 # Application level craft update
 ##
 define craft.update
-	@cd craft/
-	@git pull origin master
+	@cd craft/ && git pull origin master
 endef
 
 
