@@ -1,10 +1,10 @@
 Craft
 =====
-
 Craft is a super simple (maybe not needed?) Makefile framework. 
 It is very basic and meant to keep your Makefile management organized.
 
 --
+
 
 ## Setup
 You will need to clone the repo first.
@@ -28,7 +28,7 @@ $ cp -rf make/ path/to/app
 
 ## Bundle
 You can bundle Craft with your current make file like this.
-```mk
+```sh
 install-craft:
   @echo "Fetching Craft.."
   @git clone git@github.com:jwerle/craft.git
@@ -111,8 +111,12 @@ Starting mongodb...
 Starting app...
 ```
 
+---
+
 ## Why?
 It started off as a hack and became fun so I thought I'd share it.
+
+---
 
 ## License
 MIT
