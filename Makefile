@@ -1,14 +1,16 @@
+## core
+-include make/lib/Makefile
+
+ifndef (CRAFT)
 install-craft:
 	@echo "Fetching Craft.."
 	@git clone git@github.com:jwerle/craft.git
-	@echo "Creating make/ directory.."
+	@echo "Creating make/ directory//"
 	@mkdir make
 	@echo "Installing Craft.."
 	@cp -rf craft/make/* make/
 	@echo "Good to go!"
-
-## Core
-include make/lib/Makefile
+endif
 
 ##
 # @target &clean
