@@ -42,8 +42,7 @@
 #
 # Does nothing
 ##
-define utils.not_implemented	
-	@ #no-op
+define utils.not_implemented
 endef
 
 
@@ -54,4 +53,23 @@ endef
 ##
 define utils.warn_not_implemented
 	@$(warning [NOT_IMPLEMENTED] => '$1 not implemented')
+endef
+
+
+define utils.isRoot
+	"$(craft.ME)" == "root"
+endef
+
+define utils.toUpperCase
+	`echo "$1" | tr [[:lower:]] [[:upper:]]`
+endef
+
+define utils.fs.mkdirs
+	echo $2
+	for d in $2; do (mkdir $1/$$d;); done
+endef
+
+define utils.forEach
+	echo $i
+	`for i in $1 do echo $dd; $(call $2, $dd;); done`
 endef
