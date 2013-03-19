@@ -151,18 +151,18 @@ craft.update:
 #
 # Updates Craft from the root of the directory
 ##
-craft.core_update:
+craft.core.update:
 	@$(call craft.core_update)
 
 
 ##
 # @public
-# @target core_push_update
+# @target core.push_update
 #
 # Updates Craft from the root of the directory
 # and then adds, commits, and pushes to master
 ##
-craft.core_push_update: craft.core_update
+craft.core.push_update: craft.core.update
 	@$(call craft.core_push_update)
 
 
@@ -173,8 +173,19 @@ craft.core_push_update: craft.core_update
 # Updates Craft from the root of the directory
 # and then adds, commits, and pushes to master
 ##
-craft.core_log:
-	@$(call craft.core_log)
+craft.core.log:
+	@$(call craft.corelog)
+
+
+##
+# @public
+# @target sync_app
+#
+# Updates Craft from the root of the directory
+# and then adds, commits, and pushes to master
+##
+craft.sync_app:
+	@$(call craft.sync_app)
 
 
 ##

@@ -146,3 +146,13 @@ define craft.core_log
 	@$(warning "It is assumed that you are in the root of the Craft project directory")
 	git log
 endef
+
+
+##
+#	@func sync_app
+#
+# Sync current application with most up to date Craft build
+##
+define craft.sync_app
+	cp -rf `pwd`/craft/make/* `pwd`/make/
+endef
