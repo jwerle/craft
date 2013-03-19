@@ -137,6 +137,37 @@ craft.targets:
 
 ##
 # @public
+# @target update
+#
+# Updates Craft
+##
+craft.update:
+	@$(call craft.update)
+
+
+##
+# @public
+# @target core_update
+#
+# Updates Craft from the root of the directory
+##
+craft.core_update:
+	@$(call craft.core_update)
+
+
+##
+# @public
+# @target core_push_update
+#
+# Updates Craft from the root of the directory
+# and then adds, commits, and pushes to master
+##
+craft.core_push_update: craft.core_update
+	@$(call craft.core_push_update)
+
+
+##
+# @public
 # @target noop
 #
 # no-op

@@ -93,9 +93,9 @@ endef
 
 
 ##
-# @func not_implemented
+# @func strtoupper
 #
-# Emits a make warning "Target not implemented"
+# Converts a string to upper case
 ##
 define craft.strtoupper
 	`echo "$1" | tr [[:lower:]] [[:upper:]]`
@@ -103,10 +103,35 @@ endef
 
 
 ##
-# @func not_implemented
+# @func update
 #
-# Emits a make warning "Target not implemented"
+# Application level craft update
 ##
-define craft.fs.mkdirs
-	for d in $2; do (echo "$1/$$d";); done
+define craft.update
+	@cd craft/
+	@git pull origin master
+endef
+
+
+##
+# @func core_update
+#
+# Core level craft update
+##
+define craft.core_update
+	@$(warning "It is assumed that you are in the root of the Craft project directory")
+	git pull origin $(CRAFT_GIT_BRANCH)
+endef
+
+
+##
+# @func core_push_update
+#
+# Core level craft push
+##
+define craft.core_push_update
+	@$(warning "It is assumed that you are in the root of the Craft project directory")
+	git add .
+	git commit -m"Core update v$(craft.version)"
+	git push origin $(CRAFT_GIT_BRANCH)
 endef
