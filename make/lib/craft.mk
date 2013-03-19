@@ -88,7 +88,7 @@ c__list_targets__:
 #
 # Hello message to the user :)
 ##
-craft.hello = "Craft Makefile utiltity v$(CRAFT_VERSION)"
+craft.hello = "Craft Makefile utility v$(CRAFT_VERSION)"
 craft.hello:
 	@echo "Hello"
 
