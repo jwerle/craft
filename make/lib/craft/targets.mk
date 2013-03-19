@@ -184,7 +184,7 @@ craft.core.log:
 # Updates Craft from the root of the directory
 # and then adds, commits, and pushes to master
 ##
-craft.sync_app:
+craft.sync_app: craft.update
 	@$(call craft.sync_app)
 
 
