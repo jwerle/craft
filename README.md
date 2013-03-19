@@ -1,8 +1,8 @@
 Craft
 =====
 
-Craft is a Makefile bootstrap framework. It is very basic and meant to keep
-your Makefile management organized.
+Craft is a super simple (maybe not needed?) Makefile framework. 
+It is very basic and meant to keep your Makefile management organized.
 
 --
 
@@ -21,7 +21,7 @@ Copy the contents of the `make/` directory into your working application directo
 ```sh
 $ cp -rf make/ path/to/app
 ```
-##### It is also recommended to copy the `Makefile` found in the root of the `craft/` directory.
+*It is also recommended to copy the `Makefile` found in the root of the `craft/` directory.*
 
 --
 
@@ -81,11 +81,19 @@ After our `pre` hook has ran, the `clean-update` target will run and a provided 
 ```sh
 clean-update.after
   @mkdir ./tmp
-  @npm start
   @sudo service start mongodb
+  @npm start
 ```
 
 Our `clean-update` target now has there parts of its operation and can operate accordingly.
+```sh
+$ make clean
+Stopping app...
+Stopping mongodb...
+"done"
+Starting mongodb...
+Starting app...
+```
 
 ## Why?
 It started off as a hack and became fun so I thought I'd share it.
