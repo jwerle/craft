@@ -27,16 +27,22 @@ $ cp -rf make/ path/to/app
 
 
 ## Bundle
-You can bundle Craft with your current make file like this.
+You can bundle Craft with your current `Makefile` by putting the following target first. 
+If the `CRAFT` variable is not defined then the condition will pass and the install-craft target
+will be executed when you invoke `make`
 ```sh
+ifndef (CRAFT)
+.DEFAULT install-craft
+all: install-craft
 install-craft:
   @echo "Fetching Craft.."
-  @git clone git@github.com:jwerle/craft.git
-  @echo "Creating make/ directory//"
-  @mkdir make
-  @echo "Installing Craft.."
-  @cp -rf craft/make/* make/
-  @echo "Good to go!"
+	@git clone git@github.com:jwerle/craft.git
+	@echo "Creating make/ directory//"
+	@mkdir make
+	@echo "Installing Craft.."
+	@cp -rf craft/make/* make/
+	@echo "Good to go!"
+endif
 ```
 
 ---
