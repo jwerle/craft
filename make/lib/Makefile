@@ -1,6 +1,6 @@
-CRAFT_VERSION = 0.0.1
-CRAFT_TARGETS = `make c__list_targets__`
-CRAFT_TOP = $(dir $(lastword $(MAKEFILE_LIST)))
+export CRAFT_VERSION = 0.0.1
+export CRAFT_TARGETS = `make c__list_targets__`
+export CRAFT_TOP = $(dir $(lastword $(MAKEFILE_LIST)))
 
 ##
 # Grab first target
