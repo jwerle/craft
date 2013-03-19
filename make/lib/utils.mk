@@ -65,8 +65,7 @@ define utils.toUpperCase
 endef
 
 define utils.fs.mkdirs
-	echo $2
-	for d in $2; do (mkdir $1/$$d;); done
+	for d in $2; do (echo "$$d";); done
 endef
 
 define utils.forEach

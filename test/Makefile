@@ -23,5 +23,5 @@ build.after: craft.noop
 	@echo "Working directory       : `pwd`"
 	@echo "Project directory       : `pwd`/$(PROJECT_DIR)"
 	@echo "Application directories : [$(APP_DIRS)]"
-	$(call utils.fs.mkdirs,`pwd`/$(PROJECT_DIR),$(APP_DIRS))
+	@$(call utils.fs.mkdirs,`pwd`/$(PROJECT_DIR),$(APP_DIRS))
 	@echo "Built"
