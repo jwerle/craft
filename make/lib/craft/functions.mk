@@ -149,7 +149,7 @@ endef
 
 define craft.install
 	@$(warning "It is assumed that you are in the root of your application directory")
-	git clone $(CRAFT_GIT_REPO) craft
+	test -d craft || git clone $(CRAFT_GIT_REPO) craft
 	@make craft.sync_app
 endef
 
