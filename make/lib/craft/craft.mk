@@ -10,6 +10,7 @@ CRAFT_WD 						:= $(shell pwd)
 CRAFT_DIR 					:= $(CRAFT_WD)/make
 CRAFT_LIB_DIR				:= $(CRAFT_DIR)/lib
 CRAFT_TEMPLATE_DIR 	:= $(CRAFT_DIR)/tpl
+CRAFT_GIT_REPO			:= git@github.com:jwerle/craft.git
 CRAFT_GIT_BRANCH    := master
 
 # Core functions

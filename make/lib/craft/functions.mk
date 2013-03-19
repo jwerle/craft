@@ -147,6 +147,13 @@ define craft.core_log
 endef
 
 
+define craft.install
+	@$(warning "It is assumed that you are in the root of your application directory")
+	git clone $(CRAFT_GIT_REPO) craft
+	@make craft.sync_app
+endef
+
+
 ##
 #	@func sync_app
 #

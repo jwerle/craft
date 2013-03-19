@@ -190,6 +190,16 @@ craft.sync_app: craft.update
 
 ##
 # @public
+# @target install
+#
+# Installs Craft in the current application directory
+##
+craft.install: craft.install
+	@$(call craft.install)
+
+
+##
+# @public
 # @target noop
 #
 # no-op
