@@ -168,6 +168,17 @@ craft.core_push_update: craft.core_update
 
 ##
 # @public
+# @target core_log
+#
+# Updates Craft from the root of the directory
+# and then adds, commits, and pushes to master
+##
+craft.core_log:
+	@$(call craft.core_log)
+
+
+##
+# @public
 # @target noop
 #
 # no-op

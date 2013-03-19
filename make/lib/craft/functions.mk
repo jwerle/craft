@@ -132,6 +132,17 @@ endef
 define craft.core_push_update
 	@$(warning "It is assumed that you are in the root of the Craft project directory")
 	git add .
-	git commit -m"Core update v$(craft.version)"
+	git commit -m"Core update v$(CRAFT_VERSION)"
 	git push origin $(CRAFT_GIT_BRANCH)
+endef
+
+
+##
+# @func core_log
+#
+# Core level git log putput
+##
+define craft.core_log
+	@$(warning "It is assumed that you are in the root of the Craft project directory")
+	git log
 endef
