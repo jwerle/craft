@@ -1,3 +1,4 @@
+.PHONY: $(1) _$(1) pre-$(1) $(1).pre after-$(1) $(1).after
 ##
 # @target $target
 #
