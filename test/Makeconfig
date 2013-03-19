@@ -1,3 +1,0 @@
-PROJECT = "Test"
-APP_DIRS = "app config log test bin"
-PROJECT_DIR = "./test"

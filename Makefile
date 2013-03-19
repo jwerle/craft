@@ -7,7 +7,7 @@ include make/lib/Makefile
 # This is called when the target 'clean' is called.
 # If it is not defined 
 &clean:
-	$(call utils.warn_not_implemented,clean)
+	$(call craft.warn_not_implemented,clean)
 
 
 ##
@@ -16,7 +16,7 @@ include make/lib/Makefile
 # This is called when the target 'build' is called.
 # If it is not defined 
 &build:
-	$(call utils.warn_not_implemented,build)
+	$(call craft.warn_not_implemented,build)
 
 
 ##
@@ -25,7 +25,7 @@ include make/lib/Makefile
 # This is called when the target 'install' is called.
 # If it is not defined 
 &install:
-	$(call utils.warn_not_implemented,install)
+	$(call craft.warn_not_implemented,install)
 
 
 ##
@@ -34,4 +34,4 @@ include make/lib/Makefile
 # This is called when the target 'test' is called.
 # If it is not defined 
 &test:
-	$(call utils.warn_not_implemented,test)
+	$(call craft.warn_not_implemented,test)
