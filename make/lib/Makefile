@@ -10,15 +10,15 @@ craft:
 	@echo `pwd`
 
 ##
-# Utils
+# Common variables 
 #
-include make/lib/utils.mk
+include make/common.mk
 
 
 ##
-# Common variables 
+# Utils
 #
-include make/lib/common.mk
+include make/lib/utils.mk
 
 
 ##
