@@ -3,7 +3,7 @@
 ##
 export CRAFT 				:= 1
 TOP 								?= $(shell pwd)
-CRAFT_VERSION 			:= 0.0.4
+CRAFT_VERSION 			:= 0.0.5
 CRAFT_TARGETS 			:= `make c__list_targets__`
 CRAFT_TOP 					:= $(TOP)
 CRAFT_WD 						:= $(shell pwd)
