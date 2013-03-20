@@ -160,5 +160,5 @@ endef
 # Sync current application with most up to date Craft build
 ##
 define craft.sync_app
-	cp -rf `pwd`/craft/make/lib `pwd`/make/lib && cp -rf `pwd`/craft/make/tpl `pwd`/make/tpl
+	cp -rf `pwd`/craft/make/lib/* `pwd`/make/lib/* && cp -rf `pwd`/craft/make/tpl/* `pwd`/make/tpl/*
 endef
